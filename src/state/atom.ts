@@ -1,8 +1,8 @@
 import { atom } from 'recoil';
 import { IEvento } from '../interfaces/IEvento';
 
-export const eventStateList = atom<IEvento[]>({
-  key: 'eventStateList',
+export const eventListState = atom<IEvento[]>({
+  key: 'eventListState',
   default: [
     {
       descricao: 'Estudar React',

@@ -48,3 +48,5 @@ To learn React, check out the [React documentation](https://reactjs.org/).
 ## References
 
 [Recoil](https://recoiljs.org/)
+[Context API](https://pt-br.reactjs.org/docs/context.html)
+[Redux](https://redux.js.org/)
