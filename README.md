@@ -56,3 +56,5 @@ To learn React, check out the [React documentation](https://reactjs.org/).
 [Regras do Hooks](https://pt-br.reactjs.org/docs/hooks-rules.html)
 
 [Event Tracker GitHub](https://github.com/alura-cursos/event-tracker)
+
+[Kalend Documentation](https://docs.kalend.org/docs/intro)
