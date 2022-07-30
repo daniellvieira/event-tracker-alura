@@ -48,5 +48,11 @@ To learn React, check out the [React documentation](https://reactjs.org/).
 ## References
 
 [Recoil](https://recoiljs.org/)
+
 [Context API](https://pt-br.reactjs.org/docs/context.html)
+
 [Redux](https://redux.js.org/)
+
+[Regras do Hooks](https://pt-br.reactjs.org/docs/hooks-rules.html)
+
+[Event Tracker GitHub](https://github.com/alura-cursos/event-tracker)
