@@ -1,18 +1,14 @@
 import React from 'react';
-import { useSetRecoilState } from 'recoil';
 import { IEvento } from '../../../interfaces/IEvento';
-import { eventListState } from '../../../state/atom';
+import useUpdateAppointment from '../../../state/hooks/useUpdateAppointment';
 
 const EventoCheckbox: React.FC<{ evento: IEvento }> = ({ evento }) => {
 
-  const setAppointmentsList = useSetRecoilState<IEvento[]>(eventListState);
+  const updateAppointment = useUpdateAppointment();
+
   const changeStatus = () => {
     const changedEvent = { ...evento, completo: !evento.completo }
-
-    setAppointmentsList(oldList => {
-      const index = oldList.findIndex(evt => evt.id === evento.id)
-      return [...oldList.slice(0, index), changedEvent, ...oldList.slice(index + 1)]
-    })
+    updateAppointment(changedEvent)
   }
 
   const estilos = [
