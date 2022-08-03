@@ -1,18 +1,12 @@
 import React from 'react';
-import { useSetRecoilState } from 'recoil';
 import { IEvento } from '../../interfaces/IEvento'
-import { eventListState } from '../../state/atom';
+import useDeleteAppointment from '../../state/hooks/useDeleteAppointment';
 import style from './Evento.module.scss';
 import EventoCheckbox from './EventoCheckbox';
 
 const Evento: React.FC<{ evento: IEvento }> = ({ evento }) => {
   
-  // const [name, setName] = useRecoilState<number>(nameState)
-  const setAppointmentsList = useSetRecoilState<IEvento[]>(eventListState);
-  const deleteAppointment = () => {
-    setAppointmentsList(oldList => oldList.filter(event => event.id !== evento.id))
-  }
-
+  const deleteAppointment = useDeleteAppointment();
   const estilos = [style.Evento]
 
   if (evento.completo) {
@@ -25,7 +19,7 @@ const Evento: React.FC<{ evento: IEvento }> = ({ evento }) => {
     <div className="cards-info">
       <h3 className={style.descricao}>{evento.descricao} - {evento.inicio.toLocaleDateString()}</h3>
     </div>
-    <i className="far fa-times-circle fa-2x" onClick={deleteAppointment}></i>
+    <i className="far fa-times-circle fa-2x" onClick={() => deleteAppointment(evento)}></i>
   </div>)
 }
 
