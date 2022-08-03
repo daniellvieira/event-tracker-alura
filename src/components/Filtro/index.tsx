@@ -1,17 +1,22 @@
 import React, { useState } from 'react';
+import { useSetRecoilState } from 'recoil';
+import { IAppointmentsFilter } from '../../interfaces/IAppointmentsFilter';
+import { appointmentsFilter } from '../../state/atom';
 import style from './Filtro.module.scss';
 
-const Filtro: React.FC<{ aoFiltroAplicado: (data: Date | null) => void }> = ({ aoFiltroAplicado }) => {
+const Filtro: React.FC = () => {
   
   const [data, setData] = useState('')
+
+  const setAppointmentFilter = useSetRecoilState<IAppointmentsFilter>(appointmentsFilter)
   
   const submeterForm = (evento: React.FormEvent<HTMLFormElement>) => {
     evento.preventDefault()
-    if (!data) {
-      aoFiltroAplicado(null)
-      return
-    }
-    aoFiltroAplicado(new Date(data))
+
+    const filter: IAppointmentsFilter = {
+      data: data ? new Date(data) : null
+    } as IAppointmentsFilter;
+    setAppointmentFilter(filter)
   }
 
   return (<form className={style.Filtro} onSubmit={submeterForm}>

@@ -1,8 +1,8 @@
 import { useRecoilValue } from 'recoil';
-import { eventListState } from '../atom';
+import { filteredAppointmentsState } from '../selectors';
 
 const useListAppointments = () => {
-  return useRecoilValue(eventListState);
+  return useRecoilValue(filteredAppointmentsState);
 };
 
 export default useListAppointments;

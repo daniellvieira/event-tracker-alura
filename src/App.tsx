@@ -22,7 +22,7 @@ function App() {
           </Card>
           <hr />
           <Card>
-            <ListaDeEventos aoFiltroAplicado={aplicarFiltro} />
+            <ListaDeEventos />
           </Card>
         </div>
         <div className={style.Coluna}>

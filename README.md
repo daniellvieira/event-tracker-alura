@@ -58,3 +58,7 @@ To learn React, check out the [React documentation](https://reactjs.org/).
 [Event Tracker GitHub](https://github.com/alura-cursos/event-tracker)
 
 [Kalend Documentation](https://docs.kalend.org/docs/intro)
+
+[Clean Code](https://www.alura.com.br/artigos/o-que-e-clean-code)
+
+[Filter JS](https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Array/filter)

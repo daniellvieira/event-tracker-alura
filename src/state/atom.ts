@@ -1,4 +1,5 @@
 import { atom } from 'recoil';
+import { IAppointmentsFilter } from '../interfaces/IAppointmentsFilter';
 import { IEvento } from '../interfaces/IEvento';
 
 export const eventListState = atom<IEvento[]>({
@@ -19,4 +20,9 @@ export const eventListState = atom<IEvento[]>({
       id: 1642342959,
     },
   ],
+});
+
+export const appointmentsFilter = atom<IAppointmentsFilter>({
+  key: 'appointmentsFilter',
+  default: {},
 });
