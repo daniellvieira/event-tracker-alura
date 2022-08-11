@@ -1,5 +1,6 @@
 import { selector } from 'recoil';
 import { StatusEnum } from '../../interfaces/IAppointmentsFilter';
+import { IEvento } from '../../interfaces/IEvento';
 import { appointmentsFilter, eventListState } from '../atom';
 
 export const filteredAppointmentsState = selector({
@@ -28,5 +29,18 @@ export const filteredAppointmentsState = selector({
     });
 
     return appointments;
+  },
+});
+
+export const appointmentsAsync = selector({
+  key: 'appointmentsAsync',
+  get: async () => {
+    const responseHttp = await fetch('http://localhost:8080/eventos');
+    const appointmentJson: IEvento[] = await responseHttp.json();
+    return appointmentJson.map((appointment) => ({
+      ...appointment,
+      inicio: new Date(appointment.inicio),
+      fim: new Date(appointment.fim),
+    }));
   },
 });

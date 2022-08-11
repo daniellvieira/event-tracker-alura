@@ -66,3 +66,5 @@ To learn React, check out the [React documentation](https://reactjs.org/).
 [String Enum TS](https://mariusschulz.com/blog/string-enums-in-typescript)
 
 [JSON Server](https://github.com/typicode/json-server#getting-started)
+
+[Mockando APIs REST com json-server](https://www.alura.com.br/artigos/mockando-apis-rest-com-json-server)
