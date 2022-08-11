@@ -21,3 +21,5 @@
 [JSON Server](https://github.com/typicode/json-server#getting-started)
 
 [Mockando APIs REST com json-server](https://www.alura.com.br/artigos/mockando-apis-rest-com-json-server)
+
+[Prop Drilling & React Context](https://www.alura.com.br/artigos/prop-drilling-no-react-js)
